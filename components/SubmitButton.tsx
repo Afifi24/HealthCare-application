@@ -11,7 +11,7 @@ const SubmitButton = ({ isLoading, className, children }: ButtonProps) => {
     <Button
       type="submit"
       disabled={isLoading}
-      className={className ?? "shad-primary-btn disabled:animate-bounce w-full"}
+      className={className ?? "shad-primary-btn  w-full"}
     >
       {children}
     </Button>
