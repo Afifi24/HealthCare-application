@@ -60,7 +60,8 @@ const RegisterForm = ({ user }: { user: User }) => {
       };
       // @ts-ignores
       const patient = await registerPatient(patientData);
-      if (patient) router.push(`/patients/${user.$id}/new/appointment`);
+      if (patient) router.push(`/patients/${user.$id}/new-appointment`);
+      setIsLoading(false);
     } catch (error) {
       console.log("error", error);
       setIsLoading(false);
@@ -206,14 +207,14 @@ const RegisterForm = ({ user }: { user: User }) => {
           <CustomFormField
             fieldType={FormFieldType.INPUT}
             control={form.control}
-            name="insuranceProvider"
+            name="insurranceProvider"
             label="Insurance provider"
             placeholder="BlueCross BlueShield"
           />
           <CustomFormField
             fieldType={FormFieldType.INPUT}
             control={form.control}
-            name="insurancePolicyNumber"
+            name="insurrancePolicyNumber"
             label="Insurance policy number"
             placeholder="ABC123456789"
           />
